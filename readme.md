@@ -1,3 +1,29 @@
-# cb-messa
+# cb-messa (cb stands for comeback ig)
 
-### i've recently realized that i am losing my coding skills. not even coding, i started forgetting overall swe stuff.
+## Context
+
+### I've started losing my hard skills. 
+
+By hard skills I do mean **almost everything**. Frontend, backend, tools, and even basic algorithms, all them are being left behind due to my foolishness. Currently I entered a company named Kaspi Montazh Service as a DCC (Document Control Center) and IT (only as a sysadmin, nothing special). This job is literally draining all the energy by the end of the afternoon, therefore I just come back home and just lie on the bed for the rest of the day, doom scrolling on social media. 
+
+### I'm struggling on my career orientation.
+
+Unfortunately, preparing to UNT (Unified National Testing) led me to lose all of my technical skills due to lack of free time after the classes at college. The funniest part is that I could not make it and got only 89 points on grant sector, hahhaha. I've literally lost my precious time on just learning how to solve equations again. Everytime before to sit UNT I always had specific thoughts on changing my professional direction. 
+
+### Inconvenient tendencies in the SWE job market.
+
+I'm not going to say that AI ruined everything and the job market was perfect right before AI dropped. No, the job market was already cooked, however AI perhaps did affect the job market specifically for junior engineers. AI is cool and stuff; I used to vibe code via Claude models, and now I am on Codex, the thing is that AI can actually make you rely on it. **And this was the biggest mistake I've let.**
+
+Now I cannot resist using AI models to code for me, so I can just leave the agent on auto made and AFK. However, I am trying to fix this problem. 
+
+
+
+## Goal
+
+### A complete new roadmap.
+
+Since we cannot possibly compete frontier AI models in coding, we should love it as it is and move to another SWE field that might be relevant. 
+
+### The comeback.
+
+Being at work, doing completely irrelevant to me responsibilities is the worst experience that I've had these last two weeks. I started missing SWE so much that I decided to return. I know it is going to be tough, but I need to make it somehow.
