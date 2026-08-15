@@ -23,4 +23,27 @@ const getActiveUsers = (data) => {
   return simplifiedArray;
 };
 
-console.log(getActiveUsers(users));
+// console.log(getActiveUsers(users));
+
+const getUserById = (data, id) => {
+  return data.find((user) => user.id === id);
+};
+
+// console.log(getUserById(users, 3));
+
+const hasUnderageUsers = (data) => {
+  return data.some((user) => user.age >= 18);
+};
+
+const areAllUsersActive = (data) => {
+  return data.every((user) => user.active === true);
+};
+
+// console.log(hasUnderageUsers(users));
+// console.log(areAllUsersActive(users));
+
+const getAverageAge = (data) => {
+  return data.reduce((acc, curr) => acc + curr.age, 0) / data.length;
+};
+
+// console.log(getAverageAge(users));
