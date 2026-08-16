@@ -22,12 +22,7 @@ const updatedUser = { ...user, age: 23 };
 // console.log(updatedUser);
 
 const activateUser = (data, id) => {
-  const newUsers = [...data];
-
-  newUsers.map((u) => (u.id == id ? (u.active = true) : data));
-
-  return newUsers;
+  return data.map((u) => (u.id === id ? { ...u, active: true } : u));
 };
 
-console.log(activateUser(users, 2));
-console.log(users);
+// console.log(activateUser(users, 3));
