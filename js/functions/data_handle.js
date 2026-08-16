@@ -37,5 +37,7 @@ const bookTable = (data, id, u_cred) => {
   });
 };
 
-console.log(bookTable(tables, 2, "Dana"));
-console.log(bookTable(tables, 2, "Alikhan"));
+// const initCall = bookTable(tables, 2, "Dana");
+// const nextCall = bookTable(initCall, 2, "Alikhan");
+
+// console.log(initCall, nextCall);
