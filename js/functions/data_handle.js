@@ -28,9 +28,14 @@ const activateUser = (data, id) => {
 // console.log(activateUser(users, 3));
 
 const bookTable = (data, id, u_cred) => {
-  return data.map((table) =>
-    table.id === id ? { ...table, bookedBy: u_cred } : table,
-  );
+  return data.map((table) => {
+    if (table.id === id && table.booked === false) {
+      return { ...table, booked: true, bookedBy: u_cred };
+    } else {
+      return table;
+    }
+  });
 };
 
-// console.log(bookTable(tables, 2, "Dana"));
+console.log(bookTable(tables, 2, "Dana"));
+console.log(bookTable(tables, 2, "Alikhan"));
