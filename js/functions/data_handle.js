@@ -10,19 +10,13 @@ const getUserSummary = (u) => {
 
 // console.log(getUserSummary(user));
 
-const getDisplayName = (u) => {
-  return `${u.name} (${u.age})`;
+const getDisplayName = ({ name, age }) => {
+  return `${name} (${age})`;
 };
 
 // console.log(getDisplayName(user));
 
-const updateUser = (u) => {
-  const updatedUser = { ...u };
-
-  updatedUser.age = 23;
-
-  return updatedUser;
-};
+const updatedUser = { ...user, age: 23 };
 
 console.log(user);
-console.log(updateUser(user));
+console.log(updatedUser);

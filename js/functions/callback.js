@@ -38,7 +38,7 @@ const areAllUsersActive = (data) => {
 // console.log(areAllUsersActive(users));
 
 const getAverageAge = (data) => {
-  return data.reduce((acc, curr) => acc + curr.age, 0);
+  return data.reduce((acc, curr) => acc + curr.age, 0) / data.length;
 };
 
 // console.log(getAverageAge(users));
