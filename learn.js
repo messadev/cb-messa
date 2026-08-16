@@ -32,7 +32,7 @@ const getUserById = (data, id) => {
 // console.log(getUserById(users, 3));
 
 const hasUnderageUsers = (data) => {
-  return data.some((user) => user.age >= 18);
+  return data.some((user) => user.age < 18);
 };
 
 const areAllUsersActive = (data) => {
@@ -46,4 +46,20 @@ const getAverageAge = (data) => {
   return data.reduce((acc, curr) => acc + curr.age, 0);
 };
 
-console.log(getAverageAge(users));
+// console.log(getAverageAge(users));
+
+const orders = [
+  { id: 1, userId: 1, total: 5000, status: "completed" },
+  { id: 2, userId: 3, total: 12000, status: "pending" },
+  { id: 3, userId: 1, total: 7000, status: "completed" },
+  { id: 4, userId: 2, total: 3000, status: "cancelled" },
+  { id: 5, userId: 3, total: 9000, status: "completed" },
+];
+
+const getCompletedRevenue = (data) => {
+  const completedOrders = data.filter((order) => order.status === "completed");
+
+  return completedOrders.reduce((init, next) => init + next.total, 0);
+};
+
+// console.log(getCompletedRevenue(orders));
