@@ -12,13 +12,13 @@ const users = [
 ];
 
 const getActiveUsers = (data) => {
-  data.sort((x, y) => x.name.localeCompare(y.name));
-
   const filtered = data.filter((user) => user.active && user.age >= 18);
 
   const simplifiedArray = filtered.map((user) => {
     return { id: user.id, name: user.name };
   });
+
+  simplifiedArray.sort((x, y) => x.name.localeCompare(y.name));
 
   return simplifiedArray;
 };
@@ -43,7 +43,7 @@ const areAllUsersActive = (data) => {
 // console.log(areAllUsersActive(users));
 
 const getAverageAge = (data) => {
-  return data.reduce((acc, curr) => acc + curr.age, 0) / data.length;
+  return data.reduce((acc, curr) => acc + curr.age, 0);
 };
 
-// console.log(getAverageAge(users));
+console.log(getAverageAge(users));
