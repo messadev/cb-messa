@@ -44,9 +44,13 @@ const bookTable = (data, id, u_cred) => {
 // console.log(initCall, nextCall);
 
 const enableEmailNotifications = (data, id) => {
-  return data.map((u) => u.id === id ? { ...u, u.settings.notifications.email = true } : u);
-};
+  return data.map((u) => u.id === id ? {
+    ...u, settings: {
+      ...u.settings, notifications: {
+        ...u.settings.notifications, email: true
+      }
+  } } : u);
+}; // was supposed to go through the whole map object, accessing all nested directories instead of fetching only the root object.
+// fixed it somehow, ahahha.
 
-const emailEnabledUsers = enableEmailNotifications(adv_users, 2);
-
-console.log(emailEnabledUsers);
+// const emailEnabledUsers = enableEmailNotifications(adv_users, 2);
