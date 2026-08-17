@@ -54,3 +54,19 @@ const enableEmailNotifications = (data, id) => {
 // fixed it somehow, ahahha.
 
 // const emailEnabledUsers = enableEmailNotifications(adv_users, 2);
+
+const addTable = (data, newObj) => {
+  data.push(newObj);
+
+  return data;
+};
+
+const addTableResult = addTable(tables, {
+  id: 4,
+  name: "Table 4",
+  booked: false,
+  bookedBy: null,
+});
+
+// console.log(addTableResult === tables);
+// the test returns 'true', confirming we did not create a new array, but modified the initial one, inserting given data
