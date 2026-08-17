@@ -1,6 +1,7 @@
 // in this data_handle.js messa is learning on how to handle, mutate, structurize, and access data properly out of various data collection types.
 
 import { user, users, tables } from "../data.js";
+import { advanced_users as adv_users } from "../data.js";
 
 const getUserSummary = (u) => {
   const { name, email } = u;
@@ -41,3 +42,11 @@ const bookTable = (data, id, u_cred) => {
 // const nextCall = bookTable(initCall, 2, "Alikhan");
 
 // console.log(initCall, nextCall);
+
+const enableEmailNotifications = (data, id) => {
+  return data.map((u) => u.id === id ? { ...u, u.settings.notifications.email = true } : u);
+};
+
+const emailEnabledUsers = enableEmailNotifications(adv_users, 2);
+
+console.log(emailEnabledUsers);

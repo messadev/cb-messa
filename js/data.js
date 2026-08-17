@@ -29,3 +29,28 @@ export const tables = [
   { id: 2, name: "Table 2", booked: false, bookedBy: null },
   { id: 3, name: "Table 3", booked: true, bookedBy: "Ali" },
 ];
+
+export const advanced_users = [
+  {
+    id: 1,
+    name: "Ali",
+    settings: {
+      theme: "dark",
+      notifications: {
+        email: true,
+        sms: false,
+      },
+    },
+  },
+  {
+    id: 2,
+    name: "Dana",
+    settings: {
+      theme: "light",
+      notifications: {
+        email: false,
+        sms: true,
+      },
+    },
+  },
+];
