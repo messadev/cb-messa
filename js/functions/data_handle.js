@@ -69,5 +69,20 @@ const addTableResult = addTable(tables, {
 });
 
 // console.log(addTableResult);
-// console.log(addTableResult === tables);
 // it appears that the ticket was stating not to mutate the initial data as i did. fixed the issue.
+
+const removeTable = (data, id) => {
+  const removedTable = data.filter((table) => table.id != id);
+
+  return removedTable;
+};
+
+// console.log(removeTable(tables, 2));
+
+const renameTable = (data, id, newName) => {
+  const renamedTable = data.map((t) => t.id === id ? { ...t, name: newName } : t);
+
+  return renamedTable;
+};
+
+// console.log(renameTable(tables, 1, 'VIP Table'));
