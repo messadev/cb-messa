@@ -68,6 +68,6 @@ const addTableResult = addTable(tables, {
   bookedBy: null,
 });
 
-console.log(addTableResult);
-console.log(addTableResult === tables);
-// the test returns 'true', confirming we did not create a new array, but modified the initial one, inserting given data
+// console.log(addTableResult);
+// console.log(addTableResult === tables);
+// it appears that the ticket was stating not to mutate the initial data as i did. fixed the issue.
