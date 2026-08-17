@@ -56,9 +56,9 @@ const enableEmailNotifications = (data, id) => {
 // const emailEnabledUsers = enableEmailNotifications(adv_users, 2);
 
 const addTable = (data, newObj) => {
-  data.push(newObj);
+  const addedTable = [...data, newObj];
 
-  return data;
+  return addedTable;
 };
 
 const addTableResult = addTable(tables, {
@@ -68,5 +68,6 @@ const addTableResult = addTable(tables, {
   bookedBy: null,
 });
 
-// console.log(addTableResult === tables);
+console.log(addTableResult);
+console.log(addTableResult === tables);
 // the test returns 'true', confirming we did not create a new array, but modified the initial one, inserting given data
