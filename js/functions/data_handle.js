@@ -72,7 +72,7 @@ const addTableResult = addTable(tables, {
 // it appears that the ticket was stating not to mutate the initial data as i did. fixed the issue.
 
 const removeTable = (data, id) => {
-  const removedTable = data.filter((table) => table.id != id);
+  const removedTable = data.filter((table) => table.id !== id);
 
   return removedTable;
 };
