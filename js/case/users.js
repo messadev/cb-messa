@@ -13,6 +13,9 @@ const loadUsersData = async () => {
     currentStatus.textContent = `Отлично, мы получили все нужные данные!`;
 
     const data = await response.json();
+
+    usersList.replaceChildren();
+
     data.forEach((user) => {
       const userElement = document.createElement("p");
 
