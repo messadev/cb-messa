@@ -10,9 +10,9 @@ const loadUsersData = async () => {
       throw new Error(`HTTP Error: ${response.status}`);
     }
 
-    currentStatus.textContent = `Отлично, мы получили все нужные данные!`;
-
     const data = await response.json();
+
+    currentStatus.textContent = "";
 
     usersList.replaceChildren();
 
@@ -25,7 +25,7 @@ const loadUsersData = async () => {
       usersList.append(userElement);
     });
   } catch (e) {
-    currentStatus.textContent = e;
+    currentStatus.textContent = "Произошла ошибка при запросе данных.";
     console.error(e);
   }
 };
