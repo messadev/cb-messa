@@ -13,15 +13,21 @@ loadUsersBtn.addEventListener("click", (event) => {
       );
 
       if (!response.ok) {
-        currentStatus.textContent = `Ошибка при запросе данных: ${response.status}`;
-      } else {
-        currentStatus.textContent = `Отлично, мы получили данные!`;
+        throw new Error(`HTTP Error: ${response.status}`);
       }
 
       const data = await response.json();
-      // data.map((u) => ); i don't get this part, how do i return those data to html?
+      data.forEach((user) => {
+        const userElement = document.createElement("p");
+
+        userElement.textContent = `${user.name} - ${user.email}`;
+        userElement.style.fontWeight = "bold";
+
+        usersList.append(userElement);
+      });
     } catch (e) {
-      console.error(`Ошибка при запросе данных: ${e}`);
+      currentStatus.textContent = e;
+      console.error(e);
     }
   };
 
